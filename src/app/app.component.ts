@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { EmpleadoFormComponent } from './empleado-form/empleado-form.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
+  standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: '<app-empleado-form></app-empleado-form>',
+  imports: [CommonModule, EmpleadoFormComponent]
 })
-export class AppComponent {
-  title = 'empleados_app';
-}
+export class AppComponent { }

@@ -1,0 +1,33 @@
+<h1>miAppEmpleado está ejecutándose</h1>
+<h2>Empleados de la empresa</h2>
+
+<form (ngSubmit)="enviarFormulario()">
+  <label>Nombre del empleado:</label><br>
+  <input type="text" [(ngModel)]="nombre" name="nombre" placeholder="Introduce el nombre del empleado" required><br><br>
+  
+  <label>Apellido del empleado:</label><br>
+  <input type="text" [(ngModel)]="apellido" name="apellido" placeholder="Introduce el apellido del empleado" required><br><br>
+  
+  <label>Edad del empleado:</label><br>
+  <input type="number" [(ngModel)]="edad" name="edad" placeholder="Introduce la edad del empleado" required><br><br>
+  
+  <label>Dirección del empleado:</label><br>
+  <input type="text" [(ngModel)]="direccion" name="direccion" placeholder="Introduce la dirección del empleado" required><br><br>
+  
+  <label>Empresa del empleado:</label><br>
+  <input type="text" [(ngModel)]="empresa" name="empresa" placeholder="Introduce la empresa del empleado" required><br><br>
+  
+  <label>Nacionalidad del empleado:</label><br>
+  <input type="text" [(ngModel)]="nacionalidad" name="nacionalidad" placeholder="Introduce la nacionalidad del empleado" required><br><br>
+  
+  <div>
+    <input type="radio" id="registrado" name="estado" value="registrado" [(ngModel)]="estado">
+    <label for="registrado">Registrado</label>
+  </div>
+  <div>
+    <input type="radio" id="noregistrado" name="estado" value="no-registrado" [(ngModel)]="estado">
+    <label for="noregistrado">No registrado</label>
+  </div>
+  <br>
+  <button type="submit">Enviar</button>
+</form>
